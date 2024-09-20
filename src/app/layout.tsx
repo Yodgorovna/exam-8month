@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { Footer } from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -54,7 +55,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={geistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
